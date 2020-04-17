@@ -60,7 +60,7 @@ h2{
 
 .text{
     width:0;
-    z-index: 100;
+    /* z-index: 100; */
     position:absolute;
     font-size: 1em;
     display:flex;
@@ -85,13 +85,13 @@ h2{
     display:inline;
     background-color:#fffe;
     /* text-shadow: 0 -0.1vw 0 #fff, 0 0.1vw 0 #fff, -0.1vw 0 #fff, 0.1vw 0 0 #fff; */
-    z-index:200;
+    /* z-index:200; */
     position:relative;
 }
 
 .text::before{
     content:"";
-    z-index:100;
+    /* z-index:100; */
     display:block;
     width:0.2vw;
     height:100vw;
