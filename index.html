@@ -147,6 +147,7 @@
             textDOM.classList.add("text");
             if(date.type.length>0)textDOM.className += " "+date.type;
             let pDivDOM = document.createElement("div");
+            textDOM.style.zIndex = 100-date.y; //iT oNlY lOoKs gOoD oN fIrEfOx
             let pDOM = document.createElement("p");
             pDOM.innerHTML = date.text;
             pDivDOM.appendChild(pDOM);
