@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal 2 History Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Portal 2 Speedrunning History Timeline</h1>
+    <h2>Made by using collective knowledge of Portal 2 speedrunners.</h2>
+    <div id="timeline">
+        <div id="ages"></div>
+        <div id="dates">
+            <div class="text">
+            </div>
+        </div>
+        
+    </div>
+    <div id="footer">
+        Last updated: 17th April 2020<br>
+        <span>Something's missing/incorrect? Contact Krzyhau#8514</span>
+    </div>
+
+
+    <script>
+        const dates = [
+        {x: 2011+4/12, y:30, type:"date2 left", text:"Crouch Flying Glitch<br>(April 2011)"},
+        {x: 2011+7/12, y:3, type:"date2", text:"Door skip<br>(July 2011)"},
+        {x: 2011+10/12, y:12, type:"date2", text:"Challenge Mode<br>added to the game<br>(October 2011)"},
+
+        {x: 2012+1/12, y:25, type:"date1", text:"Beginnings of<br>ncla.me board<br>(January 2012)"},
+        {x: 2012+7/12, y:12, type:"date2", text:"Pocky vs Brex<br>CM competition<br>(July 2012)"},
+        {x: 2012+7/12, y:37, type:"date2", text:"Button Stuck Glitch<br>(July 2012)"},
+        {x: 2012+12/12, y:22, type:"date2", text:"Non-CM levels<br>unlocked in CM<br>(December 2012)"},
+
+        {x: 2013+3/12, y:66, type:"date2", text:"Double Dialogue Skip<br>(March 2013)"},
+        {x: 2013+3/12, y:56, type:"date2", text:"Crouch Toggle Glitch<br>(March 2013)"},
+        {x: 2013+3/12, y:46, type:"date2", text:"Super Reportal<br>(March 2013)"},
+        {x: 2013+7/12, y:22, type:"date2", text:"phys_timescale<br>controversy<br>(July 2013)"},
+        {x: 2013+8/12, y:36, type:"date2", text:"CM Flag Wrong Warp<br>(August 2013)"},
+        {x: 2013+8/12, y:11, type:"date1", text:"ncla.me upgrade<br>(August 2013)"},
+        {x: 2013+10/12, y:46, type:"date2", text:"Laser Crusher<br>7 way tie broken<br>(October 2013)"},
+
+        {x: 2014+8.1/12, y:8, type:"date1", text:"Segmented<br>Coop 25:48<br>(August 2014)"},
+        {x: 2014+9/12, y:22, type:"date1", text:"Segmented SP 57:15<br>(September 2014)"},
+        {x: 2014+9/12, y:47, type:"date2", text:"Three Gels<br>stucklaunch<br>(September 2014)"},
+        {x: 2014+9/12, y:32, type:"date2", text:"Kittaye's Crazy<br>Box 0 portals<br>(September 2014)"},
+        {x: 2014+10/12, y:60, type:"date2", text:"First Coop sub 30<br>by Klooger and AJ<br>(October 2014)"},
+        {x: 2015+1/12, y:72, type:"date2", text:"Tickrate controversy<br>(January 2015)"},
+        {x: 2015+2/12, y:43, type:"date2", text:"Znernicus' run<br>at ADGQ 2015<br>(February 2015)"},
+        {x: 2015+4/12, y:15, type:"date3", text:"First Funnel Hop<br>hop by Jetwash<br>(April 2015)"},
+        {x: 2015+3/12, y:33, type:"date3", text:"Cube Cheat<br>(March 2015)"},
+
+        {x: 2016+4/12, y:35, type:"date2", text:"Grate shot<br>(Portal CUUT)<br>(April 2016)"},
+        {x: 2016+8.5/12, y:15, type:"date1", text:"Beginnings of<br>iVerb board<br>(Aug-Sep 2016)"},
+        {x: 2017+1/12, y:36, type:"date2", text:"Znernicus' SS WR run<br>beaten by PerOculos<br>(January 2017)"},
+        {x: 2017+5/12, y:22, type:"date2", text:"100 Portals<br>Segmented<br>(May 2017)"},
+        {x: 2017+8/12, y:57, type:"date2", text:"Turret Fly Setup<br>(August 2017)"},
+        {x: 2017+8.5/12, y:5, type:"date1", text:"Can't Even vs Msushi<br>SS competition<br>(Aug-Sep 2017)"},
+        {x: 2017+9/12, y:33, type:"date2", text:"One Hop Run<br>(September 2017)"},
+        {x: 2017+10/12, y:44, type:"date3", text:"First recorded Test softlock<br>in Can't Even's WR pace run<br>(October 2017)"},
+        {x: 2017+12/12, y:17, type:"date2", text:"'give' controversy<br>(December 2017)"},
+        {x: 2018+3/12, y:25, type:"date2", text:"First OOB SP CM route<br>(Column Blocker)<br>(March 2018)"},
+        {x: 2018+3/12, y:38, type:"date3", text:"Birth of PhunaBot<br>(March 2018)"},
+        {x: 2018+5/12, y:5, type:"date2", text:"Fizzler Intro PB flood<br>(May 2018)"},
+        {x: 2018+8/12, y:15, type:"date2", text:"Early Moonshot<br>(August 2018)"},
+        {x: 2018+8/12, y:25, type:"date3", text:"PhunkPai's HOPPING<br>(August 2018)"},
+        {x: 2018+9/12, y:45, type:"date2", text:"First NoSla OOB<br>sub 1 by Can't Even<br>(September 2018)"},
+        {x: 2019+0.5/12, y:15, type:"date2", text:"Jerry Skip/Dane Skip<br>(Dec 2018 - Jan 2019)"},
+        {x: 2018+12/12, y:25, type:"date2", text:"Coop Hub 1-2 Skip,<br>category split<br>(December 2018)"},
+        {x: 2018+12/12, y:38, type:"date2", text:"Cube Clip<br>(December 2018)"},
+
+        {x: 2019+4/12, y:13, type:"date3", text:"Spidda<br>got mod<br>(April 2019)"},
+        {x: 2019+5/12, y:25, type:"date2", text:"Pancake Skip<br>(May 2019)"},
+        {x: 2019+6/12, y:4, type:"date2", text:"First NoSLA Inbounds<br>sub 1 by Can't Even<br>(June 2019)"},
+        {x: 2019+6/12, y:35, type:"date1", text:"Can't Even's run<br>at SGDQ 2019<br>(June 2019)"},
+        {x: 2019+7/12, y:50, type:"date2", text:"BTG in 0 portals<br>by PerOculos<br>(July 2019)"},
+        {x: 2019+8.4/12, y:20, type:"date1", text:"Zypeh dominating<br>SP CM (60/60)<br>(August 2019)"},
+        {x: 2019+7/12, y:64, type:"date2", text:"Moving portals banned<br>(July 2019)"},
+        {x: 2019+9.3/12, y:11, type:"date2", text:"Coop TAS <br>(September 2019)"},
+        {x: 2019+11/12, y:33, type:"date3", text:"Ceiling Skip<br>(November 2019)"},
+
+        {x: 2020+1/12, y:20, type:"date1", text:"Speedrun Mod<br>(January 2020)"},
+
+        {x: 2020+3/12, y:10, type:"date2", text:"Lemon Skip<br>(March 2020)"},
+        {x: 2020+4/12, y:25, type:"date2", text:"Creation of<br>this timeline<br>(April 2020)"},
+        {x: 2020+4/12, y:40, type:"date3", text:"Beer guy<br>being a dick<br>about timeline<br>(April 2020)"},
+
+        {x: 2012+1/24, y:4, type:"year", text:"2012"},
+        {x: 2013+1/24, y:4, type:"year", text:"2013"},
+        {x: 2014+1/24, y:4, type:"year", text:"2014"},
+        {x: 2015+1/24, y:4, type:"year", text:"2015"},
+        {x: 2016+1/24, y:4, type:"year", text:"2016"},
+        {x: 2017+1/24, y:4, type:"year", text:"2017"},
+        {x: 2018+1/22, y:4, type:"year", text:"2018"},
+        {x: 2019+1/24, y:4, type:"year", text:"2019"},
+        {x: 2020+1/24, y:4, type:"year", text:"2020"},
+            
+        ];
+
+        dates.sort((a,b)=>a.y<b.y);
+
+        const periods = [
+            {start: 2011+4/12, end:2012+2/12, scale:1, bg:"img/start.jpg", text:"Establishment Period", uptext:"Portal 2 released<br>(April 2011)"},
+            {start: 2012+2/12, end:2015+2/12, scale:2.5, bg:"img/oldbois.jpg", text:"Age of Old Runners", uptext:"Bananasaurus Rex dominating SP CM (48/51)<br>(February 2012)"},
+            {start: 2015+2/12, end:2016+2/12, scale:0.5, bg:"img/deadyear.jpg", text:"Dead Year", uptext:"Znern's run<br>at AGDQ 2015<br>(February 2015)"},
+            {start: 2016+2/12, end:2017+8/12, scale:1, bg:"img/interlude.jpg", text:"Interlude", uptext:"Creation of Discord server<br>(February 2016)"},
+            {start: 2017+8/12, end:2019+1/12, scale:2, bg:"img/newbois.jpg", text:"Age of New Runners", uptext:"SS WR overtaken<br>by new runners<br>(August 2017)"},
+            {start: 2019+1/12, end:2020+6/12, scale:2, bg:"img/rennaissance.jpg", text:"Rennaissance", uptext:"SS changed to NoSLA<br>(January 2019)"}
+        ]
+
+        function calcX(year){
+            let beginYear = periods[0].start;
+            let endYear = periods[periods.length-1].end;
+
+            let countValues = 0;
+            let totalValues = 0;
+
+            for(let i=0;i<periods.length;i++){
+                let y = periods[i];
+                if(year>y.end)countValues+=y.scale;
+                if(year>y.start && year<=y.end){
+                    let addVal = (year-y.start)/(y.end-y.start) * y.scale;
+                    countValues+=addVal;
+                }
+                totalValues += y.scale;
+            }
+
+            return (countValues/totalValues)*100;
+        }
+
+        let agesDOM = document.querySelector("#ages");
+        let datesDOM = document.querySelector("#dates");
+        // const startX = 2011 + 4/12;
+        // const endX = 2020+6/12;
+
+        // function calcX(x){
+        //     let scale = (x-startX)/(endX-startX);
+        //     scale = scale-(0.4-Math.min(Math.abs(0.6-scale),0.4))*0.3
+        //     scale = scale+(Math.max(0.3-scale,0.0))*scale
+        //     return scale*100;
+        // }
+
+        for(let date of dates){
+            let textDOM = document.createElement("div");
+            textDOM.classList.add("text");
+            if(date.type.length>0)textDOM.className += " "+date.type;
+            let pDivDOM = document.createElement("div");
+            let pDOM = document.createElement("p");
+            pDOM.innerHTML = date.text;
+            pDivDOM.appendChild(pDOM);
+            textDOM.appendChild(pDivDOM);
+            datesDOM.appendChild(textDOM);
+
+            let realX = calcX(date.x)
+            textDOM.style.top = date.y+"%";
+            textDOM.style.left = realX+"%";
+        }
+
+        for(let period of periods){
+            let periodDOM = document.createElement("div");
+            periodDOM.classList.add("age");
+            let pDOM = document.createElement("p");
+            pDOM.innerHTML = period.uptext;
+            periodDOM.appendChild(pDOM);
+            let imgDOM = document.createElement("div");
+            imgDOM.classList.add("image");
+            imgDOM.innerHTML = period.text;
+            periodDOM.appendChild(imgDOM);
+            agesDOM.appendChild(periodDOM);
+
+            let realStart = calcX(period.start);
+            let realEnd = 100-calcX(period.end);
+
+            periodDOM.style.left = realStart+"%";
+            periodDOM.style.right = realEnd+"%";
+            imgDOM.style.backgroundImage = "url("+period.bg+")";
+        }
+
+    </script>
+
+</body>
+</html>
