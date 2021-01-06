@@ -15,7 +15,19 @@ body{
     margin:0;
     overflow: hidden;
     background-image:url("img/tilebg.png");
+    
+}
+
+#shadow{
+    display:block;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
     box-shadow: inset 0 0 5vw #0008;
+    pointer-events:none;
 }
 
 h1{
@@ -39,6 +51,15 @@ h2{
     /* background:#eee; */
     box-sizing: border-box;
     position:relative;
+    
+    overflow-x:scroll;
+}
+
+#timeline-inner{
+    width:100%;
+    height:100%;
+    position: relative;
+    margin: 0 auto;
 }
 
 #mainline{
@@ -176,6 +197,34 @@ h2{
     font-size:1.5em;
 }
 
+#footer2{
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin:2.5vw;
+    font-size:1.5em;
+}
+
+#footer2 button{
+    border:0;
+    padding:0.5em 1em;
+    font:inherit;
+    margin-left:0.5em;
+    background:#eee;
+}
+
+#footer2 button:hover{
+    background:#ccc;
+}
+
+#footer2 button:active{
+    background:#aaa;
+}
+
 #footer>span{
     font-size:0.8em;
+}
+
+a{
+    color:inherit;
 }
