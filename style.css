@@ -46,8 +46,8 @@ h2{
 
 #timeline{
     width:95vw;
-    height:40vw;
-    min-height:40vw;
+    height: calc(100vh - 10vw);
+    min-height: calc(100vh - 10vw);
     /* background:#eee; */
     box-sizing: border-box;
     position:relative;
