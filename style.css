@@ -30,6 +30,17 @@ body{
     pointer-events:none;
 }
 
+#socials {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.5vw;
+    font-size: 3em;
+}
+#socials a {
+    text-decoration: none;
+}
+
 h1{
     text-transform: uppercase;
     font-weight: 900;
