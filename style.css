@@ -71,7 +71,6 @@ h2{
     height:100%;
     position: relative;
     margin: 0 auto;
-    mask-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1) 5em);
 }
 
 #mainline{

@@ -96,7 +96,8 @@
                 textDOM.style.left = realX+"%";
             }
 
-            for(let period of periods){
+            for(let i = 0; i < periods.length; i++){
+                let period = periods[i];
                 let periodDOM = document.createElement("div");
                 periodDOM.classList.add("age");
                 let pDOM = document.createElement("p");
@@ -114,6 +115,9 @@
                 periodDOM.style.left = realStart+"%";
                 periodDOM.style.right = realEnd+"%";
                 imgDOM.style.backgroundImage = "url("+period.bg+")";
+                if (i == periods.length - 1) {
+                    periodDOM.style.maskImage = "linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1) 5em)";
+                }
             }
             timelineInnerDOM.style.width = (timelineWidth*100) + "%";
         }
