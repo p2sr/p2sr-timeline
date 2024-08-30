@@ -47,6 +47,15 @@ function updateTimeline(timeline) {
     agesDOM.innerHTML = "";
     datesDOM.innerHTML = "";
 
+    dates = dates.sort((a,b) => a.x > b.x);
+    if (Math.floor(dates[0].x) < Math.floor(dates[dates.length-1].x)) {
+        let firstYear = Math.ceil(dates[0].x);
+        let lastYear = Math.floor(dates[dates.length-1].x);
+        for (let i = firstYear; i <= lastYear; i++) {
+            dates.push({x: i + 1 / 24, y: 4, type:"year", text: i});
+        }
+    }
+
     dates = dates.sort((a,b) => a.y < b.y);
     for (let date of dates) {
         let textDOM = document.createElement("div");
@@ -175,20 +184,8 @@ var timelines = [
             {x: 2021+1/12, y:53, type:"date1", text:'<a href="https://store.steampowered.com/news/app/620/view/3030330956958940087" target="_blank">Memory leak fix hack<br>for faster loadings<br>made by Krzyhau<br>(January 4th 2021)</a>'},
 
             // spidda lost mod 2023-12-06 https://discord.com/channels/146404426746167296/146404450859352064/1182049030407213167
-
-            {x: 2012+1/24, y:4, type:"year", text:"2012"},
-            {x: 2013+1/24, y:4, type:"year", text:"2013"},
-            {x: 2014+1/24, y:4, type:"year", text:"2014"},
-            {x: 2015+1/24, y:4, type:"year", text:"2015"},
-            {x: 2016+1/24, y:4, type:"year", text:"2016"},
-            {x: 2017+1/24, y:4, type:"year", text:"2017"},
-            {x: 2018+1/22, y:4, type:"year", text:"2018"},
-            {x: 2019+1/24, y:4, type:"year", text:"2019"},
-            {x: 2020+1/24, y:4, type:"year", text:"2020"},
-            {x: 2021+1/24, y:4, type:"year", text:"2021"},
-
-            //wiki
-            //lag fix
+            // wiki
+            // lag fix
         ],
         periods: [
             {start: 2011+4/12, end:2012+2/12, scale:1, bg:"img/start.jpg", text:"Establishment Period", uptext:"Portal 2 released<br>(April 2011)"},
@@ -210,14 +207,6 @@ var timelines = [
             {x: 2014+9.5/12, y:30, type:"date1", text:'<a href="https://youtu.be/Hzx8o-KWrJE" target="_blank">NoSLA short SR discovery<br>and first clip stuck SR<br>(accidental) by NeKz <br>(September 2014)</a>'},
             {x: 2019+11/12, y:20, type:"date1", text:'Rediscovery and research<br>of clip stuck by<br>Krzyhau and bill_play<br>(November 2019)'},
             {x: 2020+3/12, y:45, type:"date1", text:'Discovery of catapult<br>trigger deactivation<br>by Krzyhau<br>(March 2020)'},
-
-            {x: 2014+1/24, y:4, type:"year", text:"2014"},
-            {x: 2015+1/24, y:4, type:"year", text:"2015"},
-            {x: 2016+1/24, y:4, type:"year", text:"2016"},
-            {x: 2017+1/24, y:4, type:"year", text:"2017"},
-            {x: 2018+1/22, y:4, type:"year", text:"2018"},
-            {x: 2019+1/24, y:4, type:"year", text:"2019"},
-            {x: 2020+1/24, y:4, type:"year", text:"2020"},
         ],
 
         periods: [
