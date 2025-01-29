@@ -19,29 +19,37 @@
 }
 
 body {
-    color: var(--body-color);
-    font-family: "D-Din", Arial, Helvetica, sans-serif;
+    /* Flex */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
+
+    /* Sizing */
     margin: 0;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+    /* Font */
+    font-family: "D-Din", Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    color: var(--body-color);
+
     background-image: var(--body-bg);
+    overflow: hidden;
 }
 
 #shadow {
+    /* Placement */
     display: block;
-    width: 100vw;
-    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 100;
+
     box-shadow: inset 0 0 5vw #0008;
     pointer-events: none;
 }
@@ -59,93 +67,87 @@ body {
 }
 
 h1 {
-    text-transform: uppercase;
+    margin: 0;
     font-weight: 900;
     font-size: 3em;
-    margin: 0;
+    text-transform: uppercase;
 }
 
 h2 {
+    margin: 0 0 1em;
     font-weight: normal;
     font-size: 1.8em;
-    margin: 0;
-    margin-bottom: 1em;
 }
 
 #timeline {
+    position: relative;
     width: 95vw;
     height: calc(100vh - 10vw);
     min-height: calc(100vh - 10vw);
     box-sizing: border-box;
-    position: relative;
     overflow-x: scroll;
 }
 
 #timeline-inner {
-    width: 100%;
-    height: 100%;
     position: relative;
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
 #dates {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 60%;
-    bottom: 0;
-    position: absolute;
     border-top: 0.2vw solid var(--line-color);
     overflow: hidden;
 }
 
 .text {
-    width: 0;
-    /* z-index: 100; */
-    position: absolute;
-    font-size: 1em;
     display: flex;
     justify-content: center;
+    position: absolute;
+    width: 0;
+    font-size: 1em;
 }
 
 .text.left {
     justify-content: left;
 }
-
-.text.left>div {
+.text.left > div {
     text-align: left;
 }
 
-.text>div {
+.text > div {
     text-align: center;
     white-space: nowrap;
     line-height: 1.1em;
 }
 
 .text p {
-    margin: 0;
     display: inline;
-    background-color: var(--text-bg);
-    /* text-shadow: 0 -0.1vw 0 #fff, 0 0.1vw 0 #fff, -0.1vw 0 #fff, 0.1vw 0 0 #fff; */
-    /* z-index:200; */
     position: relative;
+    margin: 0;
+    background-color: var(--text-bg);
 }
 
 .text::before {
     content: "";
-    /* z-index:100; */
     display: block;
-    width: 0.2vw;
-    height: 100vw;
     position: absolute;
     bottom: 100%;
     left: 50%;
+    width: 0.2vw;
+    height: 100vw;
     background: var(--line-color);
 }
 
-.text.year>div {
-    font-size: 2em;
-    line-height: 0.8em;
+.text.year > div {
     height: 0.8em;
+    line-height: 0.8em;
     font-weight: bold;
+    font-size: 2em;
     color: var(--body-color);
 }
 
@@ -153,28 +155,26 @@ h2 {
     background: red;
 }
 
-.text.date1>div {
+.text.date1 > div {
     color: var(--date-color);
     font-size: 0.9em;
 }
 
-.text.date2>div {
+.text.date2 > div {
     color: var(--date-color);
     font-size: 0.8em;
 }
-
-.text.date3>div {
+.text.date3 > div {
     color: var(--date-color);
     font-size: 0.7em;
-    line-height: 1.06em;
+    line-height: 0.95em;
 }
 
-
 #ages {
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 40%;
-    top: 0;
-    position: absolute;
 }
 
 .age {
@@ -194,19 +194,26 @@ h2 {
 }
 
 .age .image {
-    width: 100%;
-    height: 70%;
-    bottom: 0;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
+    /* Flex */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Placement */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+
+    /* Background */
+    background-size: cover;
+    background-position: center;
+
+    /* Font */
     font-size: 2em;
     text-align: center;
-    color: white;
     text-shadow: 0 0.1vw 0.1vw black;
+    color: white;
 }
 
 #footer {
@@ -226,10 +233,10 @@ h2 {
 }
 
 #footer2 button {
-    border: 0;
     padding: 0.5em 1em;
-    font: inherit;
     margin-left: 0.5em;
+    border: 0;
+    font: inherit;
     background: #eee;
 }
 
@@ -242,7 +249,7 @@ h2 {
     background: #aaa;
 }
 
-#footer>span {
+#footer > span {
     font-size: 0.8em;
 }
 
