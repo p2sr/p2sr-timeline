@@ -1,5 +1,5 @@
 
-function calcX(periods, year) {
+function calcX(periods, year, timelineWidth) {
     // let beginYear = periods[0].start;
     // let endYear = periods[periods.length-1].end;
 
@@ -16,7 +16,7 @@ function calcX(periods, year) {
         totalValues += y.scale;
     }
 
-    return (countValues / totalValues) * 100;
+    return (countValues / totalValues) * timelineWidth;
 }
 
 const titleDom = document.querySelector("#title");
@@ -69,9 +69,9 @@ function updateTimeline(timeline) {
         textDOM.appendChild(pDivDOM);
         datesDOM.appendChild(textDOM);
 
-        let realX = calcX(periods, date.x)
+        let realX = calcX(periods, date.x, timelineWidth)
         textDOM.style.top = date.y + "%";
-        textDOM.style.left = realX + "%";
+        textDOM.style.left = realX + "px";
     }
 
     for (let i = 0; i < periods.length; i++) {
@@ -87,17 +87,18 @@ function updateTimeline(timeline) {
         periodDOM.appendChild(imgDOM);
         agesDOM.appendChild(periodDOM);
 
-        let realStart = calcX(periods, period.start);
-        let realEnd = 100 - calcX(periods, period.end);
+        let realStart = calcX(periods, period.start, timelineWidth);
+        let realWidth = calcX(periods, period.end, timelineWidth) - calcX(periods, period.start, timelineWidth);
 
-        periodDOM.style.left = realStart + "%";
-        periodDOM.style.right = realEnd + "%";
+        periodDOM.style.left = realStart + "px";
+        periodDOM.style.width = realWidth + "px";
+
         imgDOM.style.backgroundImage = `url(${period.bg})`;
         if (i == periods.length - 1) {
             periodDOM.style.maskImage = "linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1) 5em)";
         }
     }
-    timelineInnerDOM.style.width = (timelineWidth * 100) + "%";
+    timelineInnerDOM.style.width = timelineWidth + "px";
 
     currentTimeline = timeline;
 }
@@ -107,8 +108,8 @@ var timelines = [
         id: 'p2',
         title: 'Portal 2 Speedrunning History Timeline',
         subtitle: 'Created using the collective knowledge of Portal 2 speedrunners.',
-        width: 2.5,
-        dates: [ 
+        width: 5000,
+        dates: [
             //2011  
             {x: 2011+4/12, y:30, type:"date2 left", text:'<a href="https://youtu.be/KSoOjeFBqew" target="_blank">Crouch Flying Glitch<br>(April 2011)</a>'},
             {x: 2011+5/12, y:12, type:"date2 left", text:'<a href="https://youtu.be/I_7bphdNpIE" target="_blank">McPedro Glitch<br>(Elevator Skip)<br>(May 2011)</a>'},
@@ -253,7 +254,7 @@ var timelines = [
         id: 'lemon',
         title: 'Lemon Skip History Timeline',
         subtitle: 'Yep a whole timeline for one route.',
-        width: 0.5,
+        width: 1000,
 
         dates: [
             {x: 2013+3.5/12, y:15, type:"date1 left", text:"Conversion Intro SLA<br>Super Reportal route<br>by iVerb (March 2013)"},
