@@ -4,6 +4,8 @@
     --body-bg: url("img/tilebg.png");
     --text-bg: #fffe;
     --date-color: #800;
+    --padding: 3rem;
+    --stroke-width: 4px;
 
     @media (prefers-color-scheme: dark) {
         --body-color: white;
@@ -27,13 +29,11 @@ body {
 
     /* Sizing */
     margin: 0;
-    width: 100vw;
     height: 100vh;
     box-sizing: border-box;
 
     /* Font */
     font-family: "D-Din", Arial, Helvetica, sans-serif;
-    font-size: 1vw;
     color: var(--body-color);
 
     background-image: var(--body-bg);
@@ -58,8 +58,8 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 2.5vw;
-    font-size: 3em;
+    margin: 1em;
+    font-size: var(--padding);
 }
 
 #socials a {
@@ -67,23 +67,23 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin: 0 var(--padding) 0;
     font-weight: 900;
-    font-size: 3em;
+    font-size: clamp(1rem, 10vw, 5rem);
     text-transform: uppercase;
 }
 
 h2 {
-    margin: 0 0 1em;
+    margin: 0 var(--padding) 1em;
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: clamp(1rem, 7vw, 3rem);
 }
 
 #timeline {
     position: relative;
-    width: 95vw;
-    height: calc(100vh - 10vw);
-    min-height: calc(100vh - 10vw);
+    width: calc(100% - 2 * var(--padding));
+    height: calc(80vh);
+
     box-sizing: border-box;
     overflow-x: scroll;
 }
@@ -91,7 +91,6 @@ h2 {
 #timeline-inner {
     position: relative;
     margin: 0 auto;
-    width: 100%;
     height: 100%;
 }
 
@@ -100,7 +99,7 @@ h2 {
     bottom: 0;
     width: 100%;
     height: 60%;
-    border-top: 0.2vw solid var(--line-color);
+    border-top: var(--stroke-width) solid var(--line-color);
     overflow: hidden;
 }
 
@@ -138,8 +137,8 @@ h2 {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    width: 0.2vw;
-    height: 100vw;
+    width: var(--stroke-width);
+    height: 100vh;
     background: var(--line-color);
 }
 
@@ -157,40 +156,40 @@ h2 {
 
 .text.date1 > div {
     color: var(--date-color);
-    font-size: 0.9em;
+    font-size: 1.8em;
 }
 
 .text.date2 > div {
     color: var(--date-color);
-    font-size: 0.8em;
+    font-size: 1.6em;
 }
 .text.date3 > div {
     color: var(--date-color);
-    font-size: 0.7em;
+    font-size: 1.4em;
     line-height: 0.95em;
 }
 
 #ages {
     position: absolute;
     top: 0;
-    width: 100%;
     height: 40%;
 }
 
 .age {
     position: absolute;
     height: 100%;
-    border-left: 0.2vw solid var(--line-color);
+    border-left: var(--stroke-width) solid var(--line-color);
 }
 
 .age p {
     position: absolute;
     top: 0;
-    left: -0.2vw;
+    left: calc(-1 * var(--stroke-width));
     margin: 0;
     color: var(--date-color);
     background: var(--text-bg);
     font-weight: bold;
+    font-size: 2em;
 }
 
 .age .image {
@@ -212,7 +211,7 @@ h2 {
     /* Font */
     font-size: 2em;
     text-align: center;
-    text-shadow: 0 0.1vw 0.1vw black;
+    text-shadow: 0 2px 2px black;
     color: white;
 }
 
@@ -220,20 +219,21 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 2.5vw;
-    font-size: 1.5em;
+    margin: var(--padding);
+    font-size: 2em;
 }
 
 #footer2 {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 2.5vw;
-    font-size: 1.5em;
+    margin: var(--padding);
+    font-size: 2em;
 }
 
 #footer2 button {
     padding: 0.5em 1em;
+    margin-top: 0.5em; /* This will only have an effect when the screen is small and the buttons are pushed vertically */
     margin-left: 0.5em;
     border: 0;
     font: inherit;
@@ -249,10 +249,30 @@ h2 {
     background: #aaa;
 }
 
-#footer > span {
-    font-size: 0.8em;
-}
-
 a {
     color: inherit;
+}
+
+/* Responsive stuff */
+/* Eh just do this the easy way, designing mobile first is technically better but i really cannot be bothered */
+
+/* Hide GH and Discord icons when they get too close to the heading */
+@media (max-width: 1500px) {
+    #socials {
+        display: none;
+    }
+}
+
+/* Hide issue reporting text when space is tight, i cba making it look good so this is easier */
+@media (max-width: 1100px) {
+    #footer {
+        display: none;
+    }
+}
+
+/* Change placement of footer buttons if there isn't enough height */
+@media (max-height: 900px) {
+    #footer2 {
+        display: none;
+    }
 }
