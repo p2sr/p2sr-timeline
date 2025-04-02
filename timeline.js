@@ -182,6 +182,20 @@ var timelines = [
             {x: 2020+12/12, y:38, type:"date1", text:'<a href="https://youtu.be/6zeK_7ELuVo" target="_blank">First NoSLA Inbounds<br>sub 58 by Can\'t Even<br>(December 27th 2020)</a>'},
 
             {x: 2021+1/12, y:53, type:"date1", text:'<a href="https://store.steampowered.com/news/app/620/view/3030330956958940087" target="_blank">Memory leak fix hack<br>for faster loadings<br>made by Krzyhau<br>(January 4th 2021)</a>'},
+            {x: 2021+2.5/12, y:10, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/146404450859352064/811295869382426674" target="_blank">Mtriggers added<br>to SAR<br>(Feb 2022)</a>'},
+            {x: 2021+2.8/12, y:27, type:"date2", text:'<a href="https://www.youtube.com/watch?v=nn1xO659jOM" target="_blank">Finale 1 Funnelless discovered<br>(Feb 2022)</a>'},
+            {x: 2021+5.2/12, y:15, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/309475209839247370/840782130534809640" target="_blank">Finale 3<br>Pommiton Route<br>discovered (May 2021)</a>'},
+            {x: 2021+6.2/12, y:5, type:"date2", text:'<a href="https://www.youtube.com/watch?v=QjtNLBqkJUM&t=1631s" target="_blank">69 Portals Segmented<br>(June 2021)</a>'},
+            {x: 2021+6.6/12, y:33, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/855584137934536724" target="_blank">NoSLA Funneling Ban<br>(June 2021)</a>'},
+            {x: 2021+7.7/12, y:43, type:"date2", text:'<a href="https://www.youtube.com/watch?v=YaM1Q6YhWYA" target="_blank">Test Launch<br>discovered<br>(July 2021) </a>'},
+            {x: 2021+11.7/12, y:12, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/438528310394486787/912471742117711942" target="_blank">Toast Skip<br>discovered (Nov 2021)</a>'},
+            //{x: 2024+11.9/12, y:5, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/586983011740942337/913438994019278928" target="_blank">Unity Rank 1<br>in 6 months<br>(Nov 2021)</a>'},
+
+
+            {x: 2022+1/12, y:25, type:"date2", text:"EHM Understood<br>(Need discord link)"},
+            {x: 2022+1.4/12, y:55, type:"date2", text:'<a href="https://www.youtube.com/watch?v=gf3_glznM6g" target="_blank">Laser Relays Awesome Route<br>discovered (Jan 2022)</a>'},
+
+            {x: 2024+6.2/12, y:5, type:"date2", text:'<a href="" target="_blank"></a>'},
 
             // spidda lost mod 2023-12-06 https://discord.com/channels/146404426746167296/146404450859352064/1182049030407213167
             // wiki
@@ -193,7 +207,8 @@ var timelines = [
             {start: 2015+2/12, end:2016+2/12, scale:0.5, bg:"img/deadyear.jpg", text:"Dead Year", uptext:"Znernicus's run<br>at AGDQ 2015<br>(February 2015)"},
             {start: 2016+2/12, end:2017+8/12, scale:1, bg:"img/interlude.jpg", text:"Interlude", uptext:"Creation of Discord server<br>(February 2016)"},
             {start: 2017+8/12, end:2019+1/12, scale:2, bg:"img/newbois.jpg", text:"Age of New Runners", uptext:"SS WR overtaken<br>by new runners<br>(August 2017)"},
-            {start: 2019+1/12, end:2021+4/12, scale:3.2, bg:"img/renaissance.jpg", text:"Renaissance", uptext:"SS changed to NoSLA<br>(January 2019)"}
+            {start: 2019+1/12, end:2021+4/12, scale:3.2, bg:"img/renaissance.jpg", text:"Renaissance", uptext:"SS changed to NoSLA<br>(January 2019)"},
+            {start: 2021+1/12, end:2025+4/12, scale:3.2, bg:"img/placeholder.jpg", text:"", uptext:""}
         ]
     },
     {
