@@ -215,7 +215,7 @@ var timelines = [
             {x: 2022+7.5/12, y:25, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/811780246608281650/997856959036391474" target="_blank">EHM understood<br>(July 2022)</a>'},
             {x: 2022+8.1/12, y:85, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/607824741847269408/1005195813170974824" target="_blank">Autorender created<br>(Aug 2022)</a>'},
             {x: 2022+11.4/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/1040900066526896218" target="_blank">Cutscene skip<br>allowed in<br>NoSLA (Nov 2022)</a>'},
-            {x: 2022+11.4/12, y:25, type:"date3", text:'<a href="https://cdn.discordapp.com/attachments/963829425433096252/1058856068345765928/funnel_catch_cm_oob.dem.mp4?ex=67eefa8f&is=67eda90f&hm=46459d3a51cdfc1055eb9b5a04d78aa5634f4cca226a273db919b40e2c58ef90&" target="_blank">Funnel Catch<br>OOB Route<br>(Dec 2022)</a>'},
+            {x: 2022+11.4/12, y:30, type:"date3", text:'<a href="https://cdn.discordapp.com/attachments/963829425433096252/1058856068345765928/funnel_catch_cm_oob.dem.mp4?ex=67eefa8f&is=67eda90f&hm=46459d3a51cdfc1055eb9b5a04d78aa5634f4cca226a273db919b40e2c58ef90&" target="_blank">Funnel Catch<br>OOB Route<br>(Dec 2022)</a>'},
             // very crammed 
 
             //2023
