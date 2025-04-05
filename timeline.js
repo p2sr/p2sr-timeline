@@ -108,17 +108,20 @@ var timelines = [
         title: 'Portal 2 Speedrunning History Timeline',
         subtitle: 'Created using the collective knowledge of Portal 2 speedrunners.',
         width: 1.5,
-        dates: [   
+        dates: [ 
+            //2011  
             {x: 2011+4/12, y:30, type:"date2 left", text:'<a href="https://www.youtube.com/watch?v=KSoOjeFBqew" target="_blank">Crouch Flying Glitch<br>(April 2011)</a>'},
             {x: 2011+5/12, y:12, type:"date2 left", text:'<a href="https://www.youtube.com/watch?v=I_7bphdNpIE" target="_blank">McPedro Glitch<br>(Elevator Skip)<br>(May 2011)</a>'},
             {x: 2011+7/12, y:3, type:"date2", text:"Door skip<br>(July 2011)"},
             {x: 2011+10/12, y:19, type:"date2", text:'<a href="https://store.steampowered.com/news/app/620/view/2885074013968467540" target="_blank">Challenge Mode<br>added to the game<br>(October 2011)</a>'},
 
+            //2012
             {x: 2012+1/12, y:28, type:"date1", text:"Beginnings of<br>ncla.me board<br>(January 2012)"},
             {x: 2012+7/12, y:12, type:"date2", text:"Pocky vs Brex<br>CM competition<br>(July 2012)"},
             {x: 2012+7/12, y:37, type:"date2", text:"Button Stuck Glitch<br>(July 2012)"},
             {x: 2012+12/12, y:22, type:"date2", text:'<a href="https://wiki.portal2.sr/Challenge_Mode" target="_blank">Non-CM levels<br>unlocked in CM<br>(December 2012)</a>'},
 
+            //2013
             {x: 2013+3/12, y:66, type:"date2", text:"Double Dialogue Skip<br>(March 2013)"},
             {x: 2013+3/12, y:56, type:"date2", text:'<a href="https://www.youtube.com/watch?v=M-bQyzbPV4o" target="_blank">Crouch Toggle Glitch<br>(March 2013)</a>'},
             {x: 2013+3/12, y:46, type:"date2", text:'<a href="https://www.youtube.com/watch?v=yi08QYWrpdE" target="_blank">Super Reportal<br>(March 2013)</a>'},
@@ -127,18 +130,24 @@ var timelines = [
             {x: 2013+8/12, y:11, type:"date1", text:"ncla.me upgrade<br>(August 2013)"},
             {x: 2013+10/12, y:46, type:"date2", text:"Laser Crusher<br>7 way tie broken<br>(October 2013)"},
 
+            //2014
             {x: 2014+8.1/12, y:8, type:"date1", text:'<a href="https://youtu.be/U86yDlGEYHk" target="_blank">Segmented<br>Coop 25:48<br>(August 2014)</a>'},
             {x: 2014+9/12, y:22, type:"date1", text:'<a href="https://youtu.be/5x1KXcvHfnQ" target="_blank">Segmented SP 57:15<br>(September 2014)</a>'},
             {x: 2014+9/12, y:47, type:"date2", text:"Three Gels<br>stucklaunch<br>(September 2014)"},
             {x: 2014+9/12, y:32, type:"date2", text:'<a href="https://youtu.be/ngcY-iLbJYc" target="_blank">Kittaye\'s Crazy<br>Box 0 portals<br>(September 2014)</a>'},
             {x: 2014+10/12, y:60, type:"date2", text:'<a href="https://youtu.be/YNOSH0G4Kjw" target="_blank">First Coop sub 30<br>by Klooger and AJ<br>(October 2014)</a>'},
+
+            //2015
             {x: 2015+1/12, y:72, type:"date2", text:'<a href="https://portalspeedruns.proboards.com/thread/10/tickrate" target="_blank">Tickrate controversy<br>(January 2015)</a>'},
             {x: 2015+2/12, y:43, type:"date2", text:'<a href="https://youtu.be/de8DkNOkNUQ?t=498" target="_blank">Znernicus\'s run<br>at ADGQ 2015<br>(February 2015)</a>'},
             {x: 2015+4/12, y:15, type:"date3", text:'<a href="https://youtu.be/Q7iEeEmr2aY" target="_blank">First Funnel Hop<br>hop by Jetwash<br>(April 2015)</a>'},
             {x: 2015+3/12, y:33, type:"date3", text:"Cube Cheat<br>(March 2015)"},
 
+            //2016
             {x: 2016+4/12, y:35, type:"date2", text:"Grate shot<br>(Portal CUUT)<br>(April 2016)"},
             {x: 2016+8.5/12, y:15, type:"date1", text:'<a href="https://www.youtube.com/watch?v=KViYt4YUt-E" target="_blank">Beginnings of<br>iVerb board<br>(Aug-Sep 2016)</a>'},
+
+            //2017
             {x: 2017+1/12, y:36, type:"date2", text:"Znernicus' SS WR run<br>beaten by PerOculos<br>(January 2017)"},
             {x: 2017+5/12, y:22, type:"date2", text:'<a href="https://youtu.be/9vn07psVnFo" target="_blank">100 Portals<br>Segmented<br>(May 2017)</a>'},
             {x: 2017+8/12, y:57, type:"date2", text:"Turret Fly Setup<br>(August 2017)"},
@@ -146,6 +155,8 @@ var timelines = [
             {x: 2017+9/12, y:33, type:"date2", text:'<a href="https://youtu.be/i75ffJxtW_E" target="_blank">One Hop Run<br>(September 2017)</a>'},
             {x: 2017+10/12, y:44, type:"date3", text:'<a href="https://youtu.be/SKovZSBgtnI" target="_blank">First recorded Test softlock<br>in Can\'t Even\'s WR pace run<br>(October 2017)</a>'},
             {x: 2017+12/12, y:17, type:"date2", text:"'give' nonsense<br>(December 2017)"},
+            
+            //2018
             {x: 2018+3/12, y:25, type:"date2", text:"First OOB SP CM route<br>(Column Blocker)<br>(March 2018)"},
             {x: 2018+3/12, y:38, type:"date3", text:"Birth of PhunaBot<br>(March 2018)"},
             {x: 2018+5/12, y:5, type:"date2", text:'<a href="https://www.youtube.com/watch?v=DM3a55hXiI0" target="_blank">Fizzler Intro PB flood<br>(May 2018)</a>'},
@@ -156,6 +167,7 @@ var timelines = [
             {x: 2018+12/12, y:25, type:"date2", text:"Coop Hub 1-2 Skip,<br>category split<br>(December 2018)"},
             {x: 2018+12/12, y:38, type:"date2", text:"Cube Clip<br>(December 2018)"},
 
+            //2019
             {x: 2019+4/12, y:13, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/146404450859352064/566836338159255558" target="_blank">Spidda<br>got mod<br>(April 2019)</a>'},
             {x: 2019+5/12, y:25, type:"date2", text:'<a href="https://www.youtube.com/watch?v=j9KlUJ5hGi4" target="_blank">Pancake Skip<br>(May 2019)</a>'},
             {x: 2019+5.6/12, y:75, type:"date2", text:'<a href="https://cdn.discordapp.com/attachments/730456562337972248/1357130705414389861/image.png?ex=67ef15f6&is=67edc476&hm=5a14f148878c0660f223880e17be6fcf74bb2f4f4477ffac83702bfa5a3a6e70&" target="_blank">Jerrypedia Created<br>(May 2019)</a>'}, 
@@ -168,21 +180,20 @@ var timelines = [
             {x: 2019+9.3/12, y:11, type:"date2", text:'<a href="https://youtu.be/tbKhToSKM64" target="_blank">Coop TAS<br>(September 2019)</a>'}, // Video is from nov?
             {x: 2019+11/12, y:33, type:"date2", text:'<a href="https://www.youtube.com/watch?v=4ZCBQ7ZSac0" target="_blank">Ceiling Skip<br>(November 2019)</a>'},
 
+            //2020
             {x: 2020+1/12, y:23, type:"date1", text:'<a href="https://sm.portal2.sr" target="_blank">Speedrun Mod<br>(January 2020)</a>'},
-
             {x: 2020+3/12, y:5, type:"date2", text:"Lemon Skip<br>(March 2020)"},
             {x: 2020+4/12, y:45, type:"date3", text:"Creation of<br>this timeline<br>(April 2020)"},
             {x: 2020+4/12, y:15, type:"date2", text:"Explosion of NoSLA<br>Super Reportal routes<br>(end of April 2020)"},
-
             {x: 2020+6/12, y:30, type:"date2", text:"First NoSLA Inbounds<br>sub 59 by Can't Even<br>(June 18th 2020)"},
             {x: 2020+7/12, y:5, type:"date2", text:"Lemonade Skip<br>(July 2020)"},
-
             {x: 2020+10/12, y:5, type:"date2", text:"Implosion Skip<br>(October 2020)"},
             // {x: 2020+10/12, y:10, type:"date2", text:'<a href="https://www.youtube.com/watch?v=_be42ksKKbo" target="_blank">Finale 2 Jump of Death<br>(October 2020)</a>'},
             {x: 2020+11/12, y:28, type:"date2", text:'<a href="https://wiki.portal2.sr" target="_blank">P2SR Wiki<br>(November 11th 2020)</a>'}, //https://wiki.portal2.sr/index.php?title=Main_Page&oldid=1 ??? August?
             {x: 2020+11/12, y:15, type:"date2", text:'<a href="https://www.youtube.com/watch?v=ACZUxJXIgG4" target="_blank">P1 corner seamshots<br>found doable in P2<br>(November 8th 2020)</a>'},
             {x: 2020+12/12, y:38, type:"date1", text:'<a href="https://youtu.be/6zeK_7ELuVo" target="_blank">First NoSLA Inbounds<br>sub 58 by Can\'t Even<br>(December 27th 2020)</a>'},
 
+            //2021
             {x: 2021+1/12, y:53, type:"date1", text:'<a href="https://store.steampowered.com/news/app/620/view/3030330956958940087" target="_blank">Memory leak fix hack<br>for faster loadings<br>made by Krzyhau<br>(January 4th 2021)</a>'},
             {x: 2021+2.5/12, y:10, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/146404450859352064/811295869382426674" target="_blank">Mtriggers added<br>to SAR<br>(Feb 2022)</a>'},
             {x: 2021+2.8/12, y:27, type:"date3", text:'<a href="https://www.youtube.com/watch?v=nn1xO659jOM" target="_blank">Finale 1 Funnelless<br>discovered<br>(Feb 2022)</a>'},
@@ -193,6 +204,7 @@ var timelines = [
             {x: 2021+11.7/12, y:12, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/438528310394486787/912471742117711942" target="_blank">Toast Skip<br>discovered<br>(Nov 2021)</a>'},
             //{x: 2024+11.9/12, y:5, type:"date2", text:'<a href="https://discord.com/channels/146404426746167296/586983011740942337/913438994019278928" target="_blank">Unity Rank 1<br>in 6 months<br>(Nov 2021)</a>'},
 
+            //2022
             {x: 2022+1.4/12, y:60, type:"date3", text:'<a href="https://www.youtube.com/watch?v=gf3_glznM6g" target="_blank">Laser Relays<br>Food Route<br>discovered<br>(Jan 2022)</a>'},
             {x: 2022+5.7/12, y:5, type:"date3", text:'<a href="https://www.youtube.com/watch?v=hp_u81TZhsM" target="_blank">Chorus Skip<br>discovered<br>(May 2022)</a>'},
             {x: 2022+6.1/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/982757464690798593" target="_blank">Vault Save<br>allowed in NoSLA<br>(June 2022)</a>'},
@@ -206,13 +218,26 @@ var timelines = [
             {x: 2022+11.4/12, y:25, type:"date3", text:'<a href="https://cdn.discordapp.com/attachments/963829425433096252/1058856068345765928/funnel_catch_cm_oob.dem.mp4?ex=67eefa8f&is=67eda90f&hm=46459d3a51cdfc1055eb9b5a04d78aa5634f4cca226a273db919b40e2c58ef90&" target="_blank">Funnel Catch<br>OOB Route<br>(Dec 2022)</a>'},
             // very crammed 
 
+            //2023
+            {x: 2023+3.9/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/730456562337972248/1091270550996926544" target="_blank">Squat Boosting<br>discovered<br>(Mar 2023)</a>'},
+            {x: 2023+4.3/12, y:25, type:"date3", text:'<a href="https://www.youtube.com/watch?v=gqWIqjz1Naw" target="_blank">NaN Bounce<br>discovered<br>(April 2023)</a>'},
+            {x: 2023+5.8/12, y:5, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/1112483581579763742/1112483581579763742" target="_blank">Mid Portal<br>Teleportation<br>discovered<br>(May 2023)</a>'},
+            {x: 2023+7/12, y:35, type:"date3", text:'<a href="https://www.youtube.com/watch?v=0vCOToSZ3Tc" target="_blank">Finale 2 JoD<br>done in cm<br>(July 2023)</a>'},
+            {x: 2023+10/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/1165354343470465145/1165354343470465145" target="_blank">Sloped Step Boost<br>discovered<br>(Oct 2023)</a>'},
 
-
-
-
-
+            //2024
+            {x: 2024+1.6/12, y:35, type:"date1", text:'<a href="https://www.youtube.com/watch?v=Z4CvF3vcwgU&t=1309s" target="_blank">First Sub 56<br>NoSLA by<br>Burger40<br>(Jan 2024)</a>'},
+            {x: 2024+2.7/12, y:20, type:"date2", text:'<a href="https://www.twitch.tv/videos/2068844897" target="_blank">Coop Segmented<br>beaten RTA<br>after 10 years<br>(Feb 2024)</a>'},
+            {x: 2024+5.4/12, y:10, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/607824741847269408/1238936984697704609" target="_blank">Mel CM<br>(May 2024)</a>'},
+            {x: 2024+6.3/12, y:35, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/1249657004935483474/1249657004935483474" target="_blank">Propcatch PPD<br>Route<br>(June 2024)</a>'},
+            //{x: 2024+6.7/12, y:30, type:"date3", text:'<a href="https://clips.twitch.tv/StrangeCourageousBatteryTF2John-nlY5hY0gfuSsa8ne" target="_blank">Floor Snap Portal Boost (June 2024)</a>'},
+            {x: 2024+11/12, y:12, type:"date3", text:'<a href="https://lp.portal2.sr/" target="_blank">New LP Site<br>(Nov 2024)</a>'},
+            
+            //2025
+            {x: 2025+2.7/12, y:16, type:"date3", text:'<a href="https://autorender.p2sr.org/videos/PMTxwr5DEAI" target="_blank">Pull The Rug<br> Camera Hop Route<br>(Feb 2025)</a>'},
+            {x: 2025+3.6/12, y:25, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/1352006194910466068" target="_blank">vm_debug Ban<br>(Mar 2025)</a>'},
             {x: 2025+4/12, y:45, type:"date1", text:"Update of<br>this timeline<br>(April 2025)"},
-            // {x: 2022+/12, y:5, type:"date3", text:'<a href="" target="_blank"></a>'},
+            // {x: 2025+/12, y:5, type:"date3", text:'<a href="" target="_blank"></a>'},
             // spidda lost mod 2023-12-06 https://discord.com/channels/146404426746167296/146404450859352064/1182049030407213167
             // wiki
             // lag fix
