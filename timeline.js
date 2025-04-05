@@ -107,7 +107,7 @@ var timelines = [
         id: 'p2',
         title: 'Portal 2 Speedrunning History Timeline',
         subtitle: 'Created using the collective knowledge of Portal 2 speedrunners.',
-        width: 2,
+        width: 2.5,
         dates: [ 
             //2011  
             {x: 2011+4/12, y:30, type:"date2 left", text:'<a href="https://youtu.be/KSoOjeFBqew" target="_blank">Crouch Flying Glitch<br>(April 2011)</a>'},
@@ -208,12 +208,12 @@ var timelines = [
             {x: 2022+1.4/12, y:60, type:"date3", text:'<a href="https://youtu.be/gf3_glznM6g" target="_blank">Laser Relays<br>Food Route<br>discovered<br>(Jan 2022)</a>'},
             {x: 2022+5.7/12, y:5, type:"date3", text:'<a href="https://youtu.be/hp_u81TZhsM" target="_blank">Chorus Skip<br>discovered<br>(May 2022)</a>'},
             {x: 2022+6.1/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/982757464690798593" target="_blank">Vault Save<br>allowed in NoSLA<br>(June 2022)</a>'},
-            {x: 2022+6.4/12, y:33, type:"date3", text:'<a href="https://youtu.be/Dfpp1gjAPS4" target="_blank">57:15 Segmented<br>beaten by<br>AngerySnek (June 2022)</a>'},
-            {x: 2022+6.5/12, y:43, type:"date1", text:'<a href="https://youtu.be/om0VhrtQshs" target="_blank">First Sub 57<br> NoSLA by<br>AngerySnek (June 2022)</a>'},
-            {x: 2022+6.8/12, y:60, type:"date1", text:'<a href="https://discord.com/channels/146404426746167296/730456562337972248/1357138603020521593" target="_blank">Finale 4 Skip<br>discovered<br>(June 2022)</a>'},
-            {x: 2022+7/12, y:75, type:"date2", text:'<a href="https://youtu.be/MZi1dXwCqG8" target="_blank">Fullgame TAS<br>(July 2022)</a>'},
+            // {x: 2022+6.4/12, y:33, type:"date3", text:'<a href="https://youtu.be/Dfpp1gjAPS4" target="_blank">57:15 Segmented<br>beaten by<br>AngerySnek (June 2022)</a>'},
+            {x: 2022+6.5/12, y:33, type:"date1", text:'<a href="https://youtu.be/om0VhrtQshs" target="_blank">First Sub 57<br> NoSLA by<br>AngerySnek (June 2022)</a>'},
+            {x: 2022+6.8/12, y:46, type:"date1", text:'<a href="https://discord.com/channels/146404426746167296/730456562337972248/1357138603020521593" target="_blank">Finale 4 Skip<br>discovered<br>(June 2022)</a>'},
+            {x: 2022+7/12, y:61, type:"date2", text:'<a href="https://youtu.be/MZi1dXwCqG8" target="_blank">Fullgame TAS<br>(July 2022)</a>'},
             {x: 2022+7.5/12, y:25, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/811780246608281650/997856959036391474" target="_blank">EHM understood<br>(July 2022)</a>'},
-            {x: 2022+8.1/12, y:85, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/607824741847269408/1005195813170974824" target="_blank">Autorender created<br>(Aug 2022)</a>'},
+            {x: 2022+8.1/12, y:72, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/607824741847269408/1005195813170974824" target="_blank">Autorender created<br>(Aug 2022)</a>'},
             {x: 2022+11.4/12, y:15, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/636786123091345438/1040900066526896218" target="_blank">Cutscene skip<br>allowed in<br>NoSLA (Nov 2022)</a>'},
             {x: 2022+11.4/12, y:30, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/730456562337972248/1357142763510169730" target="_blank">Funnel Catch<br>OOB Route<br>(Dec 2022)</a>'},
             // very crammed 
@@ -230,7 +230,7 @@ var timelines = [
             {x: 2024+1.6/12, y:35, type:"date1", text:'<a href="https://youtu.be/Z4CvF3vcwgU" target="_blank">First Sub 56<br>NoSLA by<br>Burger40<br>(Jan 2024)</a>'},
             {x: 2024+2.7/12, y:20, type:"date2", text:'<a href="https://www.twitch.tv/videos/2068844897" target="_blank">Coop Segmented<br>beaten RTA<br>after 10 years<br>(Feb 2024)</a>'},
             {x: 2024+5.4/12, y:10, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/607824741847269408/1238936984697704609" target="_blank">Mel CM<br>(May 2024)</a>'},
-            {x: 2024+6.3/12, y:35, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/1249657004935483474/1249657004935483474" target="_blank">Propcatch PPD<br>Route<br>(June 2024)</a>'},
+            {x: 2024+6.3/12, y:35, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/1249657004935483474/1249657004935483474" target="_blank">Prop Catch PPD<br>Route<br>(June 2024)</a>'},
             //{x: 2024+6.7/12, y:30, type:"date3", text:'<a href="https://clips.twitch.tv/StrangeCourageousBatteryTF2John-nlY5hY0gfuSsa8ne" target="_blank">Floor Snap Portal Boost (June 2024)</a>'},
             {x: 2024+11/12, y:12, type:"date3", text:'<a href="https://lp.portal2.sr/" target="_blank">New LP Site<br>(Nov 2024)</a>'},
             
