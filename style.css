@@ -2,32 +2,32 @@
     font-family: "D-Din";
     src: url("ddin.otf") format("opentype");
 }
-body{
+
+body {
     font-family: "D-Din", Arial, Helvetica, sans-serif;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size:1vw;
-    height:100vh;
-    width:100vw;
+    font-size: 1vw;
+    height: 100vh;
+    width: 100vw;
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     overflow: hidden;
-    background-image:url("img/tilebg.png");
-    
+    background-image: url("img/tilebg.png");
 }
 
-#shadow{
-    display:block;
-    width:100vw;
-    height:100vh;
+#shadow {
+    display: block;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 100;
     box-shadow: inset 0 0 5vw #0008;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 #socials {
@@ -37,205 +37,208 @@ body{
     margin: 2.5vw;
     font-size: 3em;
 }
+
 #socials a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     text-transform: uppercase;
     font-weight: 900;
-    font-size:3em;
-    margin:0;
+    font-size: 3em;
+    margin: 0;
 }
 
-h2{
+h2 {
     font-weight: normal;
-    font-size:1.8em;
-    margin:0;
-    margin-bottom:1em;
+    font-size: 1.8em;
+    margin: 0;
+    margin-bottom: 1em;
 }
 
-#timeline{
-    width:95vw;
+#timeline {
+    width: 95vw;
     height: calc(100vh - 10vw);
     min-height: calc(100vh - 10vw);
     /* background:#eee; */
     box-sizing: border-box;
-    position:relative;
-    
-    overflow-x:scroll;
+    position: relative;
+    overflow-x: scroll;
 }
 
-#timeline-inner{
-    width:100%;
-    height:100%;
+#timeline-inner {
+    width: 100%;
+    height: 100%;
     position: relative;
     margin: 0 auto;
 }
 
-#mainline{
-    position:absolute;
-    width:100%;
-    height:0.2em;
-    top:33%;
-    background:black;
+#mainline {
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    top: 33%;
+    background: black;
 }
 
-#dates{
-    width:100%;
-    height:60%;
-    bottom:0;
-    position:absolute;
+#dates {
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    position: absolute;
     border-top: 0.2vw solid black;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.text{
-    width:0;
+.text {
+    width: 0;
     /* z-index: 100; */
-    position:absolute;
+    position: absolute;
     font-size: 1em;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
-.text.left{
+.text.left {
     justify-content: left;
 }
-.text.left>div{
+
+.text.left>div {
     text-align: left;
 }
 
-.text>div{
+.text>div {
     text-align: center;
-    white-space:nowrap;
+    white-space: nowrap;
     line-height: 1.1em;
 }
 
-.text p{
-    margin:0;
-    display:inline;
-    background-color:#fffe;
+.text p {
+    margin: 0;
+    display: inline;
+    background-color: #fffe;
     /* text-shadow: 0 -0.1vw 0 #fff, 0 0.1vw 0 #fff, -0.1vw 0 #fff, 0.1vw 0 0 #fff; */
     /* z-index:200; */
-    position:relative;
+    position: relative;
 }
 
-.text::before{
-    content:"";
+.text::before {
+    content: "";
     /* z-index:100; */
-    display:block;
-    width:0.2vw;
-    height:100vw;
-    position:absolute;
-    bottom:100%;
-    left:50%;
-    background:black;
+    display: block;
+    width: 0.2vw;
+    height: 100vw;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    background: black;
 }
 
-.text.year>div{
-    font-size:2em;
+.text.year>div {
+    font-size: 2em;
     line-height: 0.8em;
-    height:0.8em;
+    height: 0.8em;
     font-weight: bold;
-    color:black;
-}
-.text.year::before{
-    background:red;
+    color: black;
 }
 
-.text.date1>div{
-    color:#800;
-    font-size:0.9em;
+.text.year::before {
+    background: red;
 }
 
-.text.date2>div{
-    color:#800;
-    font-size:0.8em;
+.text.date1>div {
+    color: #800;
+    font-size: 0.9em;
 }
-.text.date3>div{
-    color:#800;
-    font-size:0.7em;
+
+.text.date2>div {
+    color: #800;
+    font-size: 0.8em;
+}
+
+.text.date3>div {
+    color: #800;
+    font-size: 0.7em;
     line-height: 1.06em;
 }
 
 
-#ages{
-    width:100%;
-    height:40%;
-    top:0;
-    position:absolute;
+#ages {
+    width: 100%;
+    height: 40%;
+    top: 0;
+    position: absolute;
 }
 
-.age{
-    position:absolute;
-    height:100%;
+.age {
+    position: absolute;
+    height: 100%;
     border-left: 0.2vw solid black;
 }
 
-.age p{
-    position:absolute;
-    top:0;
-    left:-0.2vw;
-    margin:0;
-    color:#800;
-    background:white;
+.age p {
+    position: absolute;
+    top: 0;
+    left: -0.2vw;
+    margin: 0;
+    color: #800;
+    background: white;
     font-weight: bold;
 }
 
-.age .image{
-    width:100%;
-    height:70%;
-    bottom:0;
-    position:absolute;
-    background-size:cover;
+.age .image {
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    position: absolute;
+    background-size: cover;
     background-position: center;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size:2em;
+    font-size: 2em;
     text-align: center;
-    color:white;
-    background-color:grey;
+    color: white;
+    background-color: grey;
     text-shadow: 0 0.1vw 0.1vw black;
 }
 
-#footer{
-    position:absolute;
-    bottom:0;
-    left:0;
-    margin:2.5vw;
-    font-size:1.5em;
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 2.5vw;
+    font-size: 1.5em;
 }
 
-#footer2{
-    position:absolute;
-    bottom:0;
-    right:0;
-    margin:2.5vw;
-    font-size:1.5em;
+#footer2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2.5vw;
+    font-size: 1.5em;
 }
 
-#footer2 button{
-    border:0;
-    padding:0.5em 1em;
-    font:inherit;
-    margin-left:0.5em;
-    background:#eee;
+#footer2 button {
+    border: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    margin-left: 0.5em;
+    background: #eee;
 }
 
-#footer2 button:hover{
-    background:#ccc;
+#footer2 button:hover {
+    background: #ccc;
 }
 
-#footer2 button:active{
-    background:#aaa;
+#footer2 button:active {
+    background: #aaa;
 }
 
-#footer>span{
-    font-size:0.8em;
+#footer>span {
+    font-size: 0.8em;
 }
 
-a{
-    color:inherit;
+a {
+    color: inherit;
 }
