@@ -1,9 +1,25 @@
+:root {
+    --body-color: black;
+    --line-color: black;
+    --body-bg: url("img/tilebg.png");
+    --text-bg: #fffe;
+    --date-color: #800;
+
+    @media (prefers-color-scheme: dark) {
+        --body-color: white;
+        --line-color: #ccc;
+        --body-bg: url("img/tilebg-dark.png");
+        --text-bg: #222e;
+        --date-color: #f88;
+    }
+}
 @font-face {
     font-family: "D-Din";
     src: url("ddin.otf") format("opentype");
 }
 
 body {
+    color: var(--body-color);
     font-family: "D-Din", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -15,7 +31,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     overflow: hidden;
-    background-image: url("img/tilebg.png");
+    background-image: var(--body-bg);
 }
 
 #shadow {
@@ -60,7 +76,6 @@ h2 {
     width: 95vw;
     height: calc(100vh - 10vw);
     min-height: calc(100vh - 10vw);
-    /* background:#eee; */
     box-sizing: border-box;
     position: relative;
     overflow-x: scroll;
@@ -73,20 +88,12 @@ h2 {
     margin: 0 auto;
 }
 
-#mainline {
-    position: absolute;
-    width: 100%;
-    height: 0.2em;
-    top: 33%;
-    background: black;
-}
-
 #dates {
     width: 100%;
     height: 60%;
     bottom: 0;
     position: absolute;
-    border-top: 0.2vw solid black;
+    border-top: 0.2vw solid var(--line-color);
     overflow: hidden;
 }
 
@@ -116,7 +123,7 @@ h2 {
 .text p {
     margin: 0;
     display: inline;
-    background-color: #fffe;
+    background-color: var(--text-bg);
     /* text-shadow: 0 -0.1vw 0 #fff, 0 0.1vw 0 #fff, -0.1vw 0 #fff, 0.1vw 0 0 #fff; */
     /* z-index:200; */
     position: relative;
@@ -131,7 +138,7 @@ h2 {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    background: black;
+    background: var(--line-color);
 }
 
 .text.year>div {
@@ -139,7 +146,7 @@ h2 {
     line-height: 0.8em;
     height: 0.8em;
     font-weight: bold;
-    color: black;
+    color: var(--body-color);
 }
 
 .text.year::before {
@@ -147,17 +154,17 @@ h2 {
 }
 
 .text.date1>div {
-    color: #800;
+    color: var(--date-color);
     font-size: 0.9em;
 }
 
 .text.date2>div {
-    color: #800;
+    color: var(--date-color);
     font-size: 0.8em;
 }
 
 .text.date3>div {
-    color: #800;
+    color: var(--date-color);
     font-size: 0.7em;
     line-height: 1.06em;
 }
@@ -173,7 +180,7 @@ h2 {
 .age {
     position: absolute;
     height: 100%;
-    border-left: 0.2vw solid black;
+    border-left: 0.2vw solid var(--line-color);
 }
 
 .age p {
@@ -181,8 +188,8 @@ h2 {
     top: 0;
     left: -0.2vw;
     margin: 0;
-    color: #800;
-    background: white;
+    color: var(--date-color);
+    background: var(--text-bg);
     font-weight: bold;
 }
 
@@ -199,7 +206,6 @@ h2 {
     font-size: 2em;
     text-align: center;
     color: white;
-    background-color: grey;
     text-shadow: 0 0.1vw 0.1vw black;
 }
 
@@ -229,9 +235,10 @@ h2 {
 
 #footer2 button:hover {
     background: #ccc;
+    cursor: pointer;
 }
 
-#footer2 button:active {
+#footer2 button:hover:active {
     background: #aaa;
 }
 

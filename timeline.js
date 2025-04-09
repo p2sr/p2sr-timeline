@@ -243,7 +243,7 @@ var timelines = [
             {start: 2011+4/12, end:2012+2/12, scale:1, bg:"img/start.jpg", text:"Establishment Period", uptext:"Portal 2 released<br>(April 2011)"},
             {start: 2012+2/12, end:2015+2/12, scale:2.5, bg:"img/oldbois.jpg", text:"Age of Old Runners", uptext:"Bananasaurus Rex dominating SP CM (48/51)<br>(February 2012)"},
             {start: 2015+2/12, end:2016+2/12, scale:0.5, bg:"img/deadyear.jpg", text:"Dead Year", uptext:"Znernicus's run<br>at AGDQ 2015<br>(February 2015)"},
-            {start: 2016+2/12, end:2017+8/12, scale:1, bg:"img/interlude.jpg", text:"Interlude", uptext:"Creation of Discord server<br>(February 2016)"},
+            {start: 2016+2/12, end:2017+8/12, scale:1, bg:"img/interlude.jpg", text:"Interlude", uptext:'Creation of <a href="https://discord.com/invite/hRwE4Zr" target="_blank">Discord server</a><br>(February 2016)'},
             {start: 2017+8/12, end:2019+1/12, scale:2, bg:"img/newbois.jpg", text:"Age of New Runners", uptext:"SS WR overtaken<br>by new runners<br>(August 2017)"},
             {start: 2019+1/12, end:2021+4/12, scale:3.2, bg:"img/renaissance.jpg", text:"Renaissance", uptext:"SS changed to NoSLA<br>(January 2019)"},
             {start: 2021+4/12, end:2025+11/12, scale:5, bg:"img/technologicalrevolution.jpg", text:"Technological Revolution", uptext:""}
