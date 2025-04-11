@@ -23,7 +23,8 @@ const titleDom = document.querySelector("#title");
 const subtitleDom = document.querySelector("#subtitle");
 const agesDOM = document.querySelector("#ages");
 const datesDOM = document.querySelector("#dates");
-const timelineInnerDOM = document.querySelector("#timeline-inner")
+const timelineDOM = document.querySelector("#timeline");
+const timelineInnerDOM = document.querySelector("#timeline-inner");
 
 var currentTimeline = null;
 function updateTimeline(timeline) {
@@ -171,7 +172,7 @@ var timelines = [
             //2019
             {x: 2019+4/12, y:13, type:"date3", text:'<a href="https://discord.com/channels/146404426746167296/146404450859352064/566836338159255558" target="_blank">Spidda<br>got mod<br>(April 2019)</a>'},
             {x: 2019+5/12, y:25, type:"date2", text:'<a href="https://youtu.be/j9KlUJ5hGi4" target="_blank">Pancake Skip<br>(May 2019)</a>'},
-            {x: 2019+5.6/12, y:75, type:"date2", text:'<a href="https://cdn.discordapp.com/attachments/730456562337972248/1357130705414389861/image.png?ex=67ef15f6&is=67edc476&hm=5a14f148878c0660f223880e17be6fcf74bb2f4f4477ffac83702bfa5a3a6e70&" target="_blank">Jerrypedia Created<br>(May 2019)</a>'}, 
+            {x: 2019+5.6/12, y:72, type:"date2", text:'<a href="https://cdn.discordapp.com/attachments/730456562337972248/1357130705414389861/image.png?ex=67ef15f6&is=67edc476&hm=5a14f148878c0660f223880e17be6fcf74bb2f4f4477ffac83702bfa5a3a6e70&" target="_blank">Jerrypedia Created<br>(May 2019)</a>'}, 
             //^^ fix spacing
             {x: 2019+6/12, y:4, type:"date2", text:'<a href="https://youtu.be/YfxYJcj0yeM" target="_blank">First NoSLA Inbounds<br>sub 1h by Can\'t Even<br>(June 19th 2019)</a>'},
             {x: 2019+6/12, y:35, type:"date1", text:'<a href="https://youtu.be/Q2y0j3Ex6lA" target="_blank">Can\'t Even\'s run<br>at SGDQ 2019<br>(June 2019)</a>'},
@@ -245,9 +246,9 @@ var timelines = [
             {start: 2012+2/12, end:2015+2/12, scale:2.5, bg:"img/oldbois.jpg", text:"Age of Old Runners", uptext:"Bananasaurus Rex dominating SP CM (48/51)<br>(February 2012)"},
             {start: 2015+2/12, end:2016+2/12, scale:0.5, bg:"img/deadyear.jpg", text:"Dead Year", uptext:"Znernicus's run<br>at AGDQ 2015<br>(February 2015)"},
             {start: 2016+2/12, end:2017+8/12, scale:1, bg:"img/interlude.jpg", text:"Interlude", uptext:'Creation of <a href="https://discord.com/invite/hRwE4Zr" target="_blank">Discord server</a><br>(February 2016)'},
-            {start: 2017+8/12, end:2019+1/12, scale:2, bg:"img/newbois.jpg", text:"Age of New Runners", uptext:"SS WR overtaken<br>by new runners<br>(August 2017)"},
+            {start: 2017+8/12, end:2019+1/12, scale:2, bg:"img/newbois.jpg", text:"Age of New Runners", uptext:"SS WR overtaken by new runners<br>(August 2017)"},
             {start: 2019+1/12, end:2021+4/12, scale:3.2, bg:"img/renaissance.jpg", text:"Renaissance", uptext:"SS changed to NoSLA<br>(January 2019)"},
-            {start: 2021+4/12, end:2025+11/12, scale:5, bg:"img/technologicalrevolution.jpg", text:"Technological Revolution", uptext:""}
+            {start: 2021+4/12, end:2025+7/12, scale:5, bg:"img/technologicalrevolution.jpg", text:"Technological Revolution", uptext:"The Rise of Mlugg<br>SAR versions merged<br>(April 2021)"},
         ]
     },
     {
@@ -271,3 +272,28 @@ var timelines = [
 ];
 
 updateTimeline('p2');
+
+window.addEventListener('resize', responsiveCalculate);
+window.addEventListener('DOMContentLoaded', responsiveCalculate);
+function responsiveCalculate(event = null) {
+    timelineDOM.style.height = 'calc(80vh)';
+    let titleBottom = titleDom.getBoundingClientRect().bottom;
+    let subtitleBottom = subtitleDom.getBoundingClientRect().bottom;
+    let timelineTop = timelineDOM.getBoundingClientRect().top;
+    subtitleDom.style.opacity = subtitleBottom > timelineTop ? "0" : "";
+    titleDom.style.opacity = titleBottom > timelineTop ? "0" : "";
+    if (subtitleBottom > timelineTop && titleBottom > timelineTop) {
+        timelineDOM.style.height = 'calc(100vh - var(--padding) - 1em)';
+    } else {
+        timelineDOM.style.height = 'calc(80vh)';
+    }
+}
+
+
+// Scroll sideways with mousewheel without shift
+timelineDOM.addEventListener('wheel', (event) => {
+    if (event.deltaY != 0) {
+        event.preventDefault();
+        timelineDOM.scrollLeft += event.deltaY * 2;
+    }
+});
