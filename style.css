@@ -4,7 +4,7 @@
     --body-bg: url("img/tilebg.png");
     --text-bg: #fffe;
     --date-color: #800;
-    --padding: 3rem;
+    --padding: 2rem;
     --stroke-width: 4px;
 
     @media (prefers-color-scheme: dark) {
@@ -24,7 +24,6 @@ body {
     /* Flex */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     /* Sizing */
@@ -55,37 +54,42 @@ body {
 }
 
 #socials {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    font-size: var(--padding);
+    font-size: 4rem;
+    z-index: -1000;
 }
 
 #socials a {
     text-decoration: none;
+    margin-right: 0.5em;
+}
+#socials a:last-child {
+    margin-right: 0;
 }
 
 h1 {
-    margin: 0 var(--padding) 0;
+    margin: var(--padding) var(--padding) 0;
     font-weight: 900;
-    font-size: clamp(1rem, 10vw, 5rem);
+    font-size: clamp(2rem, 8vw, 5rem);
     text-transform: uppercase;
+    text-align: center;
 }
 
 h2 {
-    margin: 0 var(--padding) 1em;
+    margin: 0 var(--padding);
     font-weight: normal;
     font-size: clamp(1rem, 7vw, 3rem);
+    text-align: center;
 }
 
 #timeline {
-    position: relative;
+    position: absolute;
+    bottom: calc(var(--padding) - 1em); /* Scrollbar below footer */
     width: calc(100% - 2 * var(--padding));
     height: calc(80vh);
 
     box-sizing: border-box;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 #timeline-inner {
@@ -108,7 +112,7 @@ h2 {
     justify-content: center;
     position: absolute;
     width: 0;
-    font-size: 1em;
+    font-size: clamp(0.6rem, 1vh, 0.8rem);
 }
 
 .text.left {
@@ -121,13 +125,13 @@ h2 {
 .text > div {
     text-align: center;
     white-space: nowrap;
-    line-height: 1.1em;
 }
 
 .text p {
     display: inline;
     position: relative;
     margin: 0;
+    line-height: 1.1em;
     background-color: var(--text-bg);
 }
 
@@ -179,6 +183,7 @@ h2 {
     position: absolute;
     height: 100%;
     border-left: var(--stroke-width) solid var(--line-color);
+    font-size: clamp(0.6rem, 1vh, 0.8rem);
 }
 
 .age p {
@@ -223,6 +228,10 @@ h2 {
     font-size: 2em;
 }
 
+#footer span {
+    margin-top: 0.25em;
+}
+
 #footer2 {
     position: absolute;
     bottom: 0;
@@ -255,23 +264,25 @@ a {
 
 /* Responsive stuff */
 /* Eh just do this the easy way, designing mobile first is technically better but i really cannot be bothered */
-
-/* Hide GH and Discord icons when they get too close to the heading */
-@media (max-width: 1500px) {
-    #socials {
-        display: none;
-    }
-}
+/* FIXME: Mobile browsers only work well with "Desktop site" enabled */
 
 /* Hide issue reporting text when space is tight, i cba making it look good so this is easier */
 @media (max-width: 1100px) {
-    #footer {
+    #footer span {
         display: none;
     }
 }
 
-/* Change placement of footer buttons if there isn't enough height */
+/* Hide footer items if there isn't enough height */
 @media (max-height: 900px) {
+    #footer > span {
+        display: none;
+    }
+}
+@media (max-height: 800px) {
+    #socials {
+        display: none;
+    }
     #footer2 {
         display: none;
     }
